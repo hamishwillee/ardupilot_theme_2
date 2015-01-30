@@ -1,0 +1,100 @@
+/*
+Theme Name: ArduPilot Theme 2
+Theme URI: http://wordpress.org/extend/themes/twentyfourteen
+Author:Hamish Willee
+Version:1.0.0
+Author URI: http://www.ardupilot.com/
+Description: The ArduPilot Theme 2 is a customized theme based on the  WordPress default theme twentyfourteen. It differs in that the theme is centred, the top menu is left-aligned, and it has been changed to a light theme.
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+Template: twentyfourteen
+Tags: light
+Text Domain: ardupilotheme
+*/
+
+/* Add my styles below. Note that the parent styles are enqueued in the functions php */
+
+ 
+/* Centre the theme */
+.site {
+margin: 0 auto;
+}
+
+/* Make the wiki content area a little wider */
+/*
+
+.site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content {
+   max-width: 900px !important;
+   }
+*/
+
+/* turn off wiki TOC */
+#wikinav {
+  display:none;
+  }
+
+/*Make content area full width*/
+.site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content {
+		max-width: 800px;
+ 	 }
+
+/* Set the content area high so there is space for the breadcrump */
+.content-area, .content-sidebar {
+padding-top: 5px;
+}
+
+/* Add some space after the breadcrumb */
+.breadcrumbs{
+margin-bottom: 20px;
+ } 
+
+/* HIde the next prev buttons */
+nav.navigation.post-navigation {
+  display:none;
+  }
+
+
+
+.entry-title {
+  text-transform:none;
+  font-size:40px;
+  font-weight:inherit;
+  }
+
+/* Shrink the breadcrumb size */
+.breadcrumbs {
+  font-size:0.9em;
+  }
+
+/* Styling for the warning text on a common page */
+.warning-common-page {
+  font-size: small; 
+  color: #993300;
+  }
+
+
+/* Highlight searchWP terms */
+.searchwp-highlight {
+background-color: yellow;
+}
+
+
+/* Fixes to left-align menu - required because last item is overflowing 
+on narrow screens */
+.primary-navigation {
+  float:none
+}
+
+@media screen and (min-width: 783px) {
+  .site-title {
+     min-width: 162px;
+  }
+
+}
+
+@media screen and (min-width: 1082px) {
+  .site-title {
+     min-width: 200px;
+  }
+
+}
+

@@ -1,0 +1,105 @@
+/* Stlyes to support a light theme
+*/
+
+.site-header {
+  background-color: black;
+}
+
+.site-footer, .site:before {
+  background-color: #DEDEDE;
+}
+
+.site-info {
+ background-color:black;
+}
+
+.widget-title,#secondary,.widget a {
+  color:black;
+}
+
+/* Remove the sublementary section - widget area below the content but before the site acknowledgements */
+#supplementary {
+  display:none;
+}
+
+/* Change the colour of the sidebar to light grat  - primarily in the narrow view */
+#secondary {
+	background-color: #dedede;  /* or transparent works too */
+}
+
+
+/* Fix up colours of the menu */
+.primary-navigation ul ul a:hover, .primary-navigation ul ul li.focus > a {
+background-color: #efefef;
+}
+
+.primary-navigation ul a:hover, .primary-navigation ul li.focus > a {
+  background-color: #efefef;
+}
+
+.primary-navigation a:hover, .primary-navigation li.focus > a {
+  background-color: #efefef;
+}
+
+.primary-navigation ul ul {
+	background-color: #f9f9f9;
+	}
+
+.sub-menu a {
+  color:black;
+}
+
+
+.primary-navigation li:hover > a,
+.primary-navigation li.focus > a {
+	background-color:  #f9f9f9; 
+	color: black;
+	}
+
+/* Remove green highlighting if a top level item is the current item */
+.site-navigation .current_page_item > a,
+.site-navigation .current_page_ancestor > a,
+.site-navigation .current-menu-item > a,
+.site-navigation .current-menu-ancestor > a {
+	color: white;
+}
+
+/* Navigation */
+.site-navigation li .current_page_item > a,
+.site-navigation li .current_page_ancestor > a,
+.site-navigation li .current-menu-item > a,
+.site-navigation li .current-menu-ancestor > a {
+	color: black;
+	}
+
+
+
+/* Support a widely-adopted but non-standard selector for text selection styles
+ * to achieve a better experience. See https://core.trac.wordpress.org/ticket/25898.
+ */
+::selection {
+	background:  #f9f9f9;
+	color: #fff;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background:  #f9f9f9;
+	color: #fff;
+	text-shadow: none;
+}
+
+/* Fix the main menu when in narrow width version - bheind toggle */
+/*
+nav#primary-navigation.site-navigation.primary-navigation.toggled-on.menu-item {
+  color:red;
+} 
+*/
+
+/* Improve appearance of the site description tagline */
+.site-description {
+  color:black;
+  font-style: italic;
+  font-size: 13px;
+  margin-top: 2px;
+}
