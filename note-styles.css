@@ -1,0 +1,43 @@
+/* CSS For notes and text used in shortcodes */
+
+/* Styling for note boxes */
+
+.info-box {
+  border: 1px solid;
+  border-radius:5px;
+  padding:5px;
+ }
+
+.info-box-title {
+  float:left;
+  padding-right:10px;
+  font-weight: bold;
+ }
+
+.info-box-text {
+  display:inline-block;
+ }
+
+.info-box-text p {
+-webkit-margin-before: initial;
+-webkit-margin-after: initial;
+}
+
+
+.note {
+  border-color: #00529B;
+  background-color: #BDE5F8;
+ }
+
+
+.warning {
+  border-color: #D8000C;
+  background-color: #FFBABA;
+ }
+
+
+.archived {
+  border-color: #D8000C;
+  background-color: #FFBABA;
+ }
+
