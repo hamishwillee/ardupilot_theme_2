@@ -78,13 +78,13 @@ background-color: #efefef;
  * to achieve a better experience. See https://core.trac.wordpress.org/ticket/25898.
  */
 ::selection {
-	background:  #f9f9f9;
+	background:  blue;
 	color: #fff;
 	text-shadow: none;
 }
 
 ::-moz-selection {
-	background:  #f9f9f9;
+	background:  blue;
 	color: #fff;
 	text-shadow: none;
 }
