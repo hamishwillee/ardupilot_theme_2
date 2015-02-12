@@ -35,10 +35,8 @@ if ( 'wiki' == get_post_type() ) { echo '<!-- #HW is a wiki page  -->';}
 
 /* Strip 'common-' from the title and record if is a common page */
 $stripped_title=get_the_title();
-$this_is_common_page=false;
 if (0 === strpos($stripped_title, 'common-')) {
     // It starts with 'common-'
-    $this_is_common_page=true;
     $stripped_title=substr($stripped_title, 7); //strip common- from title
   } 
 
@@ -68,6 +66,13 @@ if (0 === strpos($stripped_title, 'common-')) {
  - if this is a common wiki article
  - that can be edited
  - that is not in planner wiki */
+
+$this_is_common_page=false;
+if (0 === strpos($post->post_name, 'common-')) {
+      $this_is_common_page=true;
+}
+
+
 if(current_user_can('edit_posts')) {
   if (!(0 === strpos(get_blog_details()->domain, 'planner.')) AND ($this_is_common_page==true) ) {
     echo '<div class="warning-common-page"><!-- defined in theme -->EDITORS: This is a MissionPlanner common page - <a href="http://planner.ardupilot.com/wiki/'.$post->post_name.'">Edit original only</a> in APM MissionPlanner Wiki.</div>';
