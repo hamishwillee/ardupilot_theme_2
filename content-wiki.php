@@ -73,7 +73,7 @@ if (0 === strpos($post->post_name, 'common-')) {
 }
 
 
-if(current_user_can('edit_posts')) {
+if(current_user_can('edit_wikis')) {
   if (!(0 === strpos(get_blog_details()->domain, 'planner.')) AND ($this_is_common_page==true) ) {
     echo '<div class="warning-common-page"><!-- defined in theme -->EDITORS: This is a MissionPlanner common page - <a href="http://planner.ardupilot.com/wiki/'.$post->post_name.'">Edit original only</a> in APM MissionPlanner Wiki.</div>';
   }
