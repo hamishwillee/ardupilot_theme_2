@@ -45,9 +45,19 @@
 		<div class="header-main">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
+<?php
+// Remove the search bar toggle when on main site
+if (  get_blog_details()->domain !== 'ardupilot.com')
+{
+?>
 			<div class="search-toggle">
 				<a href="#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
 			</div>
+<?php
+}   //End code to remove the search toggle on main site
+?>
+
+
 
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
