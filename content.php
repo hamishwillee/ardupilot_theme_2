@@ -12,7 +12,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php twentyfourteen_post_thumbnail(); ?>
-
+        <!-- #HW child theme content php -->
 	<header class="entry-header">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
 		<div class="entry-meta">
@@ -51,6 +51,7 @@
                     // echo the excerpt (designed to be used IN PLACE OF the_excerpt
                     if( function_exists( 'searchwp_term_highlight_the_excerpt_global' ) ) {
                        searchwp_term_highlight_the_excerpt_global();
+                       echo '<!-- #HW searchwp_term_highlight_the_excerpt_global -->';
                     }
                     else {
                        the_excerpt();

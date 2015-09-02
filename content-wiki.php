@@ -91,7 +91,33 @@ if(current_user_can('edit_wikis')) {
 
 	<?php if ( is_search() ) : ?>
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+//		<?php the_excerpt(); ?>
+
+//
+
+
+                   /* Add highlight suppport from https://searchwp.com/extensions/term-highlight/ */
+                    // echo the excerpt (designed to be used IN PLACE OF the_excerpt
+                    if( function_exists( 'searchwp_term_highlight_the_excerpt_global' ) ) {
+                       searchwp_term_highlight_the_excerpt_global();
+                       echo '<!-- #HW highlightsearchglobal in wiki -->';
+                    }
+                    else {
+                       the_excerpt();
+                    }
+
+
+
+
+
+
+//
+
+
+
+
+
+
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
